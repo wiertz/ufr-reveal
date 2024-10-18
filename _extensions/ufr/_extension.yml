@@ -1,0 +1,42 @@
+title: Ufr
+# author: Thilo Wiertz
+version: 1.0.0
+quarto-required: ">=1.5.0"
+contributes:
+  formats:
+    common:
+      color:
+        blue20: &blue20 "#D7D8EC"
+        blue40: &blue40 "#AFB1D8"
+        blue100: &blue100 "#344A9A"
+        pink20: &pink20 "#fdf3fb"
+        pink40: &pink40 "#fbe7f8"
+        pink100: &pink100 "#f5c2ed"
+        green20: &green20 "#daede7"
+        green40: &green40 "#afdace"
+        green100: &green100 "#00a082"
+        yellow20: &yellow20 "#fffae0"
+        yellow40: &yellow40 "#fff6c1"
+        yellow100: &yellow100 "#ffe863"
+        sand50: &sand50 "#faf8f1"
+        sand100: &sand100 "#f6f1e3"
+        conclusion: *blue20
+        objective: *green20
+        task: *sand100
+    revealjs:
+      filters: [colors.lua]
+      theme: ufr.scss
+      logo: "ufr-logo-blue.png"
+      width: 1920
+      height: 1080
+      center-title-slide: false
+      slide-number: c
+      transition: slide
+      background-transition: fade
+      template-partials: [title-slide.html]
+      date-format: "D.MM.YYYY"
+      title-slide-attributes:
+          data-background-color: "#344A9A"
+          data-background-image: "siegel-outline.png"
+          data-background-size: contain
+          data-background-position: "top 20px right 0"

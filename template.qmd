@@ -1,0 +1,61 @@
+---
+title: &title Welcome to this quarto style
+footer: *title
+author: 
+  name: "Dr. Thilo Wiertz"
+  affiliation: "Wirtschaftsgeographie und Nachhaltige Entwicklung"
+  email: "thilo.wiertz@geographie.uni-freiburg.de"
+date: last-modified
+format: ufr-revealjs
+---
+
+## Introduction
+
+Welcome to this presentation. The following slides illustrate the formatting.
+
+## A single column slide
+
+This is a single column slide. The text of the first paragraph before a list of bullet points is emphasized.
+
+- This is one information
+- This is another information
+- And finally, consider this, too.
+
+## Different styles I {style=objective}
+
+There are some predefined styles. This is the "objective" style that I use to present objectives (e.g., of a talk, a project, a lecture).
+
+::: {.column width="50%"}
+Title left column
+
+- Left column 1
+- Left column 2
+:::
+
+::: {.column width="50%"}
+Title right column
+
+- Right column 1
+- Right column 2
+:::
+
+## Different styles II {style=task}
+
+This is another style used to present tasks.
+
+1. Please do this first.
+2. Then move on to this.
+3. And finally, write it all down.
+
+## Conclusion {style="conclusion"}
+
+This concludes the style. If you have questions or comments, please contact me at [thilo.wiertz@geographie.uni-freiburg.de](mailto:thilo.wiertz@geographie.uni-freiburg.de).
+
+::: aside
+You can see that the conclusion also uses a different style.
+:::
+
+## More Information
+
+You can learn more about controlling the appearance of RevealJS output here: <https://quarto.org/docs/presentations/revealjs/>
+

@@ -1,0 +1,142 @@
+/*-- scss:defaults --*/
+
+$body-bg: #fff;
+$body-color: #000;
+$link-color: #00004a;
+$light-bg-text-color: $body-color;
+$light-bg-link-color: $link-color;
+
+$dark-bg-text-color: #faf8f1;
+$dark-bg-link-color: #f6f1e3;
+
+$font-family-sans-serif: 'Arial', sans-serif;
+$presentation-font-size-root: 50px;
+$presentation-font-smaller: 0.8;
+$presentation-line-height: 1.3;
+
+$presentation-h1-font-size: 1.5em;
+$presentation-h2-font-size: 1.35em;
+$presentation-h3-font-size: 1em;
+$presentation-h4-font-size: 1em;
+
+$presentation-slide-text-align: left;
+$presentation-title-slide-text-align: left;
+
+$headingColor: #344A9A;
+
+/*-- scss:rules --*/
+
+.reveal .slides { 
+    text-align: left
+}
+
+.reveal .slide-number {
+    color: $headingColor !important;
+    font-size: min(2.1vh, 1.5vw) !important;
+    right: 2em !important;
+    bottom: 1rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: right !important;
+    position: absolute !important;
+    top: unset !important;
+    background-color: transparent;
+}
+
+.reveal .footer {
+    color: $headingColor !important;
+    font-size: min(2.1vh, 1.5vw) !important;
+    right: 5em !important;
+    bottom: 0.8rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: right !important;
+}
+
+.reveal .slide-logo {
+    right: unset !important;
+    bottom: 0 !important;
+    left: 5rem !important;
+    height: min(3vh, 2vw) !important;
+}
+
+.reveal .slide h2:not(:has(+h3)) {
+    margin-bottom: 6rem;
+}
+
+.reveal .slide h2 + h3 {
+    font-size: $heading2Size;
+    color: black;
+    line-height: 1;
+    margin-bottom: 5rem;
+}
+
+.reveal .slide h2 > p:first-of-type,
+.reveal .slide h3 > p:first-of-type
+{
+    color: $headingColor;
+}
+
+.reveal .slide ul ul {
+    color: $headingColor;   
+    line-height: 1;
+    list-style-type: circle;
+    font-size: smaller;
+}
+
+.reveal .slide table {
+    margin: unset;
+}
+
+.reveal .slide > img {
+    margin-left: unset !important;
+    margin-right: unset !important;
+}
+
+.reveal .slide figure > figcaption {
+    text-align: left;
+}
+
+.aside {
+    font-weight: normal;
+}
+
+#title-slide {
+    text-align: left;
+}
+
+#title-slide .title {
+    margin-top: 12rem;
+    margin-bottom: 2rem;
+    font-size: 6rem;
+}
+
+#title-slide .subtitle {
+    font-size: 3rem;
+}
+
+#title-slide #ufr-logo {
+    padding-left: 0.4rem;
+    height: 3rem;
+}
+
+#title-slide .quarto-title-authors {
+    padding: 0;
+    justify-content: left;
+}
+
+.quarto-title-block,
+.quarto-title-authors,
+.quarto-title-author,
+.quarto-title-author-name,
+.quarto-title-author-email,
+.quarto-title-affiliation,
+.date {
+    font-size: 2rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#title-slide .quarto-title-authors {
+    margin-top: 16rem !important;
+}
