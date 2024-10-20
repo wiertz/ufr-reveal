@@ -1,13 +1,52 @@
+// color definitions
+
+$ufr-darkblue: #00004a;
+$ufr-blue-20: #D7D8EC;
+$ufr-blue-40: #AFB1D8;
+$ufr-blue-100: #344A9A;
+$ufr-pink-20: #fdf3fb;
+$ufr-pink-40: #fbe7f8;
+$ufr-pink-100: #f5c2ed;
+$ufr-green-20: #daede7;
+$ufr-green-40: #afdace;
+$ufr-green-100: #00a082;
+$ufr-yellow-20: #fffae0;
+$ufr-yellow-40: #fff6c1;
+$ufr-yellow-100: #ffe863;
+$ufr-sand-50: #faf8f1;
+$ufr-sand-100: #f6f1e3;
+
+:root {
+    --ufr-darkblue: #00004a;
+    --ufr-blue-20: #D7D8EC;
+    --ufr-blue-40: #AFB1D8;
+    --ufr-blue-100: #344A9A;
+    --ufr-pink-20: #fdf3fb;
+    --ufr-pink-40: #fbe7f8;
+    --ufr-pink-100: #f5c2ed;
+    --ufr-green-20: #daede7;
+    --ufr-green-40: #afdace;
+    --ufr-green-100: #00a082;
+    --ufr-yellow-20: #fffae0;
+    --ufr-yellow-40: #fff6c1;
+    --ufr-yellow-100: #ffe863;
+    --ufr-sand-50: #faf8f1;
+    --ufr-sand-100: #f6f1e3;
+}
+
+
+
 /*-- scss:defaults --*/
 
-$body-bg: #fff;
-$body-color: #000;
-$link-color: #00004a;
+$body-bg: white;
+$body-color: black;
+$link-color: $ufr-darkblue;
 $light-bg-text-color: $body-color;
 $light-bg-link-color: $link-color;
 
-$dark-bg-text-color: #faf8f1;
-$dark-bg-link-color: #f6f1e3;
+$dark-bg-text-color: white;
+$dark-bg-link-color: $ufr-sand-50;
+$headingColor: $ufr-blue-100;
 
 $font-family-sans-serif: 'Arial', sans-serif;
 $presentation-font-size-root: 50px;
@@ -22,7 +61,6 @@ $presentation-h4-font-size: 1em;
 $presentation-slide-text-align: left;
 $presentation-title-slide-text-align: left;
 
-$headingColor: #344A9A;
 
 /*-- scss:rules --*/
 
@@ -30,27 +68,18 @@ $headingColor: #344A9A;
     text-align: left
 }
 
-.reveal .slide-number {
-    color: $headingColor !important;
-    font-size: min(2.1vh, 1.5vw) !important;
-    right: 2em !important;
-    bottom: 1rem !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: right !important;
-    position: absolute !important;
-    top: unset !important;
-    background-color: transparent;
+.aside {
+    font-weight: normal;
 }
 
+
+// footer with logo and slide number
+
 .reveal .footer {
-    color: $headingColor !important;
-    font-size: min(2.1vh, 1.5vw) !important;
-    right: 5em !important;
     bottom: 0.8rem !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    right: 5em !important;
     text-align: right !important;
+    color: $ufr-blue-100;
 }
 
 .reveal .slide-logo {
@@ -59,6 +88,20 @@ $headingColor: #344A9A;
     left: 5rem !important;
     height: min(3vh, 2vw) !important;
 }
+
+.reveal .slide-number {
+    top: unset !important;
+    right: 2em !important;
+    bottom: 1rem !important;
+    text-align: right !important;
+    color: $ufr-blue-100;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+
+// slide title and subsequent text
 
 .reveal .slide h2:not(:has(+h3)) {
     margin-bottom: 6rem;
@@ -74,19 +117,28 @@ $headingColor: #344A9A;
 .reveal .slide h2 > p:first-of-type,
 .reveal .slide h3 > p:first-of-type
 {
-    color: $headingColor;
+    color: $ufr-blue-100;
 }
 
+
+// lists
+
 .reveal .slide ul ul {
-    color: $headingColor;   
+    color: $ufr-blue-100;   
     line-height: 1;
     list-style-type: circle;
     font-size: smaller;
 }
 
+
+// tables
+
 .reveal .slide table {
     margin: unset;
 }
+
+
+// images
 
 .reveal .slide > img {
     margin-left: unset !important;
@@ -97,9 +149,8 @@ $headingColor: #344A9A;
     text-align: left;
 }
 
-.aside {
-    font-weight: normal;
-}
+
+// title slide
 
 #title-slide {
     text-align: left;

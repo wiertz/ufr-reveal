@@ -6,23 +6,23 @@ contributes:
   formats:
     common:
       color:
-        blue20: &blue20 "#D7D8EC"
-        blue40: &blue40 "#AFB1D8"
-        blue100: &blue100 "#344A9A"
-        pink20: &pink20 "#fdf3fb"
-        pink40: &pink40 "#fbe7f8"
-        pink100: &pink100 "#f5c2ed"
-        green20: &green20 "#daede7"
-        green40: &green40 "#afdace"
-        green100: &green100 "#00a082"
-        yellow20: &yellow20 "#fffae0"
-        yellow40: &yellow40 "#fff6c1"
-        yellow100: &yellow100 "#ffe863"
-        sand50: &sand50 "#faf8f1"
-        sand100: &sand100 "#f6f1e3"
-        conclusion: *blue20
-        objective: *green20
-        task: *sand100
+        ufr-blue-20: &ufr-blue-20 "#D7D8EC"
+        ufr-blue-40: "#AFB1D8"
+        ufr-blue-100: "#344A9A"
+        ufr-pink-20: "#fdf3fb"
+        ufr-pink-40: "#fbe7f8"
+        ufr-pink-100: "#f5c2ed"
+        ufr-green-20: &ufr-green-20 "#daede7"
+        ufr-green-40: "#afdace"
+        ufr-green-100: "#00a082"
+        ufr-yellow-20: "#fffae0"
+        ufr-yellow-40: "#fff6c1"
+        ufr-yellow-100: "#ffe863"
+        ufr-sand-50: "#faf8f1"
+        ufr-sand-100: &ufr-sand-100 "#f6f1e3"
+        conclusion: *ufr-blue-20
+        objective: *ufr-green-20
+        task: *ufr-sand-100
     revealjs:
       filters: [colors.lua]
       theme: ufr.scss

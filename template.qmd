@@ -21,9 +21,11 @@ This is a single column slide. The text of the first paragraph before a list of 
 - This is another information
 - And finally, consider this, too.
 
-## Different styles I {style=objective}
+## Different styles I
 
+::: {style="background-color: var(--main-bg-color)"}
 There are some predefined styles. This is the "objective" style that I use to present objectives (e.g., of a talk, a project, a lecture).
+:::
 
 ::: {.column width="50%"}
 Title left column
@@ -39,7 +41,7 @@ Title right column
 - Right column 2
 :::
 
-## Different styles II {style=task}
+## Different styles II {type=task}
 
 This is another style used to present tasks.
 

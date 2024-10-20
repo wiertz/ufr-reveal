@@ -7,8 +7,8 @@ end
 
 function Block(el)
   -- Replace variable in the background color
-  if el.attr and el.attr.attributes and el.attr.attributes.style and meta_colors and meta_colors[el.attr.attributes.style] then
-    el.attr.attributes["background-color"] = pandoc.utils.stringify(meta_colors[el.attr.attributes.style])
+  if el.attr and el.attr.attributes and el.attr.attributes.type and meta_colors and meta_colors[el.attr.attributes.type] then
+    el.attr.attributes["background-color"] = pandoc.utils.stringify(meta_colors[el.attr.attributes.type])
   end
   return el
 end
