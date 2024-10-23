@@ -215,7 +215,8 @@ p:has(+ ul) {
     gap: 0.4em 0.8em;
 }
 
-.flex-col-2 > div {
+.flex-col-2 > * {
+    display: block;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     width: 50%;
@@ -223,7 +224,8 @@ p:has(+ ul) {
     box-sizing: border-box;
 }
 
-.flex-col-3 > div {
+.flex-col-3 > * {
+    display: block;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     width: 33%;
