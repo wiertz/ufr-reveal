@@ -1,6 +1,6 @@
 ---
 title: &title Welcome to this quarto style
-footer: *title
+footer: Welcome to this quarto style | This is a looooong footline | today 
 author: 
   name: "Dr. Thilo Wiertz"
   affiliation: "Wirtschaftsgeographie und Nachhaltige Entwicklung"
@@ -9,9 +9,23 @@ date: last-modified
 format: ufr-revealjs
 ---
 
+## Title
+### Subittle
+
+Not much else here
+
+## Title
+
+![](example-image.jpg)
+
 ## Introduction
 
 Welcome to this presentation. The following slides illustrate the formatting.
+
+::: {.spacer}
+:::
+
+There is space.
 
 ## A single column slide
 
@@ -19,13 +33,77 @@ This is a single column slide. The text of the first paragraph before a list of 
 
 - This is one information
 - This is another information
+  - And a sub point
 - And finally, consider this, too.
+
+Here is another list
+
+- Another list
+
+## Highlights
+
+::: {.highlight-pink}
+But this is just normal text!
+:::
+
+::: {.highlight-green}
+But this is just normal text!
+:::
+
+::: {.small}
+- With a list
+:::
+
+::: {.highlight-yellow}
+But this is just normal text!
+:::
+
+## Highlights in a box
+
+::: {.flex-col-2}
+
+::: {}
+But this is just normal text!
+
+- Point 1
+- Point 2
+- Point 3
+:::
+
+::: {.highlight-green}
+But this is just normal text!
+
+- Point 4
+- Point 5
+- Point 6
+:::
+
+::: {.highlight-yellow}
+But this is just normal text!
+:::
+
+::: {.highlight-green}
+But this is just normal text!
+
+- Point 4
+- Point 5
+- Point 6
+:::
+:::
+
+## Compact lists
+
+::: {.compact}
+Sometimes stuff should be more compact.
+
+- Point 1
+- Point 2
+:::
+
 
 ## Different styles I
 
-::: {style="background-color: var(--main-bg-color)"}
 There are some predefined styles. This is the "objective" style that I use to present objectives (e.g., of a talk, a project, a lecture).
-:::
 
 ::: {.column width="50%"}
 Title left column
@@ -52,6 +130,10 @@ This is another style used to present tasks.
 ## Conclusion {style="conclusion"}
 
 This concludes the style. If you have questions or comments, please contact me at [thilo.wiertz@geographie.uni-freiburg.de](mailto:thilo.wiertz@geographie.uni-freiburg.de).
+
+::: {style="color: var(--ufr-yellow-dark);"}
+I should say this is important, too!
+:::
 
 ::: aside
 You can see that the conclusion also uses a different style.
