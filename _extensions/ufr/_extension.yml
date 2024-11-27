@@ -41,3 +41,4 @@ contributes:
           data-background-image: "siegel-outline.png"
           data-background-size: contain
           data-background-position: "top 20px right 0"
+      include-after-body: [no-title-slide-footer.html]
