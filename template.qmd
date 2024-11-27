@@ -1,145 +1,183 @@
 ---
-title: &title Welcome to this quarto style
-footer: Welcome to this quarto style | This is a looooong footline | today 
+title: Quarto style for Uni Freiburg presentations
+footer: Dr. Thilo Wiertz | Economic Geography and Sustainable Development | 2024
 author: 
   name: "Dr. Thilo Wiertz"
-  affiliation: "Wirtschaftsgeographie und Nachhaltige Entwicklung"
+  affiliation: "Economic Geography and Sustainable Development"
   email: "thilo.wiertz@geographie.uni-freiburg.de"
 date: last-modified
 format: ufr-revealjs
 ---
 
-## Title
-### Subittle
+## About this project
 
-Not much else here
+- Quarto converts markdown content to various output formats
+- This style is based on the [revealjs](https://revealjs.com) presentation format
+- It implements [corporate design principles](https://cd.uni-freiburg.de) of the University of Freiburg
 
-## Title
 
-![](example-image.jpg)
+## Formatting examples
+### You can add subtitles as third level headlines
 
-## Introduction
-
-Welcome to this presentation. The following slides illustrate the formatting.
+Adding a div by using `::: {.spacer}` creates a blank space.
 
 ::: {.spacer}
 :::
 
-There is space.
+So this line is set apart from the one before.
 
 ## A single column slide
 
-This is a single column slide. The text of the first paragraph before a list of bullet points is emphasized.
+Text before a list is emphasized automatically
 
-- This is one information
-- This is another information
-  - And a sub point
-- And finally, consider this, too.
-
-Here is another list
-
-- Another list
+- Lorem ipsum 1
+- Lorem ipsum 2
+- Lorem ipsum 3
 
 ## Highlights
 
+To highlight a piece of text, put it in a div:
+
 ::: {.highlight-pink}
-But this is just normal text!
+`::: {.highlight-pink}`
 :::
 
 ::: {.highlight-green}
-But this is just normal text!
-:::
-
-::: {.small}
-- With a list
+`::: {.highlight-green}`
 :::
 
 ::: {.highlight-yellow}
-But this is just normal text!
+`::: {.highlight-yellow}`
 :::
 
-## Highlights in a box
+## Flex columns
+
+Use `::: {.flex-col-2}` to flow content into two columns:
+
+::: {.spacer}
+:::
 
 ::: {.flex-col-2}
 
 ::: {}
-But this is just normal text!
+Lorem Ipsum
 
-- Point 1
-- Point 2
-- Point 3
+- Lorem ipsum 1
+- Lorem ipsum 2
+- Lorem ipsum 3
 :::
 
-::: {.highlight-green}
-But this is just normal text!
+::: {}
+Lorem Isum
 
-- Point 4
-- Point 5
-- Point 6
+- Lorem ipsum 1
+- Lorem ipsum 2
+- Lorem ipsum 3
 :::
 
-::: {.highlight-yellow}
-But this is just normal text!
+::: {}
+Lorem Isum
+
+- Lorem ipsum 1
+- Lorem ipsum 2
+- Lorem ipsum 3
 :::
 
-::: {.highlight-green}
-But this is just normal text!
+::: {}
+Lorem Isum
 
-- Point 4
-- Point 5
-- Point 6
-:::
+- Lorem ipsum 1
+- Lorem ipsum 2
+- Lorem ipsum 3
 :::
 
-## Compact lists
+:::
+
+## Flex columns
+
+Use `::: {.flex-col-3}` to flow content into three columns:
+
+::: {.spacer}
+:::
+
+::: {.flex-col-3}
+
+::: {}
+Lorem Ipsum
+
+- Lorem ipsum 1
+- Lorem ipsum 2
+- Lorem ipsum 3
+:::
+
+
+::: {}
+Lorem Ipsum
+
+- Lorem ipsum 1
+- Lorem ipsum 2
+- Lorem ipsum 3
+:::
+
+::: {}
+Lorem Ipsum
+
+- Lorem ipsum 3
+- Lorem ipsum 1
+- Lorem ipsum 2
+:::
+
+
+::: {}
+Lorem Isum
+
+- Lorem ipsum 1
+- Lorem ipsum 2
+- Lorem ipsum 3
+:::
+
+::: {}
+Lorem Isum
+
+- Lorem ipsum 1
+- Lorem ipsum 2
+- Lorem ipsum 3
+:::
+
+::: {}
+Lorem Isum
+
+- Lorem ipsum 1
+- Lorem ipsum 2
+- Lorem ipsum 3
+:::
+
+:::
+
+## Compact lines
+
+Use `::: {.compact}` to reduce line height:
+
+::: {.spacer}
+:::
 
 ::: {.compact}
-Sometimes stuff should be more compact.
+Sometimes stuff should be more compact:
 
-- Point 1
-- Point 2
+- Lorem ipsum 1
+- Lorem ipsum 2
+- Lorem ipsum 3
 :::
 
 
-## Different styles I
+## Styles {type=task}
 
-There are some predefined styles. This is the "objective" style that I use to present objectives (e.g., of a talk, a project, a lecture).
-
-::: {.column width="50%"}
-Title left column
-
-- Left column 1
-- Left column 2
-:::
-
-::: {.column width="50%"}
-Title right column
-
-- Right column 1
-- Right column 2
-:::
-
-## Different styles II {type=task}
-
-This is another style used to present tasks.
+Wha youThis is another style used to present tasks.
 
 1. Please do this first.
 2. Then move on to this.
 3. And finally, write it all down.
 
-## Conclusion {style="conclusion"}
+## Conclusion {type=conclusion}
 
 This concludes the style. If you have questions or comments, please contact me at [thilo.wiertz@geographie.uni-freiburg.de](mailto:thilo.wiertz@geographie.uni-freiburg.de).
-
-::: {style="color: var(--ufr-yellow-dark);"}
-I should say this is important, too!
-:::
-
-::: aside
-You can see that the conclusion also uses a different style.
-:::
-
-## More Information
-
-You can learn more about controlling the appearance of RevealJS output here: <https://quarto.org/docs/presentations/revealjs/>
-
