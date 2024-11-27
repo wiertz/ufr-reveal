@@ -24,6 +24,7 @@ contributes:
         objective: *ufr-green-20
         task: *ufr-sand
     revealjs:
+      embed-resources: true
       filters: [colors.lua]
       theme: ufr.scss
       logo: "ufr-logo-blue.png"
