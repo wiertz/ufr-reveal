@@ -1,0 +1,29 @@
+<style>
+  .hide {
+    display: none !important;
+  }
+</style>
+
+
+<script>
+  function remove() {
+    let footer = document.querySelector('div.footer')
+    let slideNo = document.querySelector('div.slide-number')
+    const toggleHide = () => {
+      if (Reveal.isFirstSlide()) {
+        slideNo.classList.add('hide')
+        footer.classList.add('hide')
+      } else {
+        slideNo.classList.remove('hide')
+        footer.classList.remove('hide')
+      }
+    }
+    slideNo.classList.add('hide')
+    footer.classList.add('hide')
+
+    Reveal.on('ready', event => toggleHide())
+    Reveal.on('slidechanged', event => toggleHide())
+  }
+
+  window.onload = remove()
+</script>
