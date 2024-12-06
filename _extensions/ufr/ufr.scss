@@ -72,14 +72,21 @@ $presentation-title-slide-text-align: left;
 
 /*-- scss:rules --*/
 
-.reveal .slides { 
-    text-align: left;
+.reveal .slide blockquote {
+  color: var(--ufr-green);
+  border-left-color: var(--ufr-green);
+}
+
+.reveal .slide figure>figcaption {
+  color: $ufr-blue;
+  text-align: center;
 }
 
 .reveal .slide aside {
+  color: #888;
     font-weight: normal;
-    font-size: 35px;
-    bottom: 100px;
+    font-size: 0.75em;
+    bottom: 2em;
 }
 
 // add space
@@ -100,7 +107,6 @@ $presentation-title-slide-text-align: left;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
 }
 
 .reveal .slide-logo {
@@ -113,8 +119,8 @@ $presentation-title-slide-text-align: left;
 
 .reveal .slide-number {
     top: unset !important;
-    bottom: 13px !important;
-    font-size: 2.3vmin !important;
+    bottom: 15px !important;
+    font-size: 2.5vmin !important;
     right: 2rem !important;
     text-align: right !important;
     color: $ufr-blue;
@@ -143,10 +149,6 @@ $presentation-title-slide-text-align: left;
     margin-bottom: 5rem;
 }
 
-.reveal .slide h2 + img {
-    margin-bottom: 3rem;
-}
-
 p:has(+ ul) {
     color: var(--ufr-blue);
     margin-bottom: 0;
@@ -168,15 +170,15 @@ p:has(+ ul) {
 }
 
 
-// highlights
+// colored blocks
 
-.highlight-pink {
+.block-pink {
     background-color: var(--ufr-pink);
     padding: 0.1em 0.4em;
     border-radius: 5px;
 }
 
-.highlight-green {
+.block-green {
     background-color: var(--ufr-green-40);
     padding: 0.1em 0.4em;
     margin-top: 0.4em;
@@ -184,7 +186,7 @@ p:has(+ ul) {
     border-radius: 5px;
 }
 
-.highlight-yellow {
+.block-yellow {
     background-color: var(--ufr-yellow);
     padding: 0.1em 0.4em;
     border-radius: 5px;
@@ -192,6 +194,10 @@ p:has(+ ul) {
 
 
 // layout helpers
+
+.tiny {
+  font-size: 0.5em;
+}
 
 .small {
     font-size: 0.8em;
@@ -204,53 +210,18 @@ p:has(+ ul) {
     margin-bottom: 0 !important;
 }
 
-.flex-col-2,
-.flex-col-3 {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 80%;
-    justify-content: flex-start;
-    align-items: baseline;
-    gap: 0.4em 0.8em;
-}
-
-.flex-col-2 > * {
-    display: block;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    width: 50%;
-    max-height: fit-content;
-    box-sizing: border-box;
-}
-
-.flex-col-3 > * {
-    display: block;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    width: 33%;
-    max-height: fit-content;
-    box-sizing: border-box;
-}
-
-
-
-// tables
-.reveal .slide table {
-    margin: unset;
-}
+// // tables
+// .reveal .slide table {
+//     margin: unset;
+// }
 
 
 // images
 
-.reveal .slide > img {
-    margin-left: unset !important;
-    margin-right: unset !important;
-}
-
-.reveal .slide figure > figcaption {
-    text-align: left;
-}
+// .reveal .slide > img {
+//     margin-left: unset !important;
+//     margin-right: unset !important;
+// }
 
 
 // title slide
@@ -293,4 +264,12 @@ p:has(+ ul) {
 
 #title-slide .quarto-title-authors {
     margin-top: 16rem !important;
+}
+
+// Agenda slide
+
+.reveal .slide .agenda {
+  border-top: 5px solid $headingColor;
+  border-bottom: 5px solid $headingColor;
+  padding: 2rem 20% 1rem 0.3rem;
 }

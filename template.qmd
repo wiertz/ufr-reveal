@@ -10,11 +10,19 @@ format: ufr-revealjs
 ---
 
 ## About this project
-
+ 
 - Quarto converts markdown content to various output formats
 - This style is based on the [revealjs](https://revealjs.com) presentation format
 - It implements [corporate design principles](https://cd.uni-freiburg.de) of the University of Freiburg
 
+
+## Agenda 
+
+::: {.agenda}
+- Formatting examples
+- A single column slide
+- ...futher chapters
+:::
 
 ## Formatting examples
 ### You can add subtitles as third level headlines
@@ -34,125 +42,29 @@ Text before a list is emphasized automatically
 - Lorem ipsum 2
 - Lorem ipsum 3
 
+::: {.aside}
+Note that there is a side remark in an `.aside` div.
+:::
+
 ## Highlights
 
 To highlight a piece of text, put it in a div:
 
-::: {.highlight-pink}
-`::: {.highlight-pink}`
+::: {.block-pink}
+`::: {.block-pink}`
 :::
 
-::: {.highlight-green}
-`::: {.highlight-green}`
+::: {.block-green}
+`::: {.block-green}`
 :::
 
-::: {.highlight-yellow}
-`::: {.highlight-yellow}`
+::: {.block-yellow}
+`::: {.block-yellow}`
 :::
 
-## Flex columns
+## Blockquote
 
-Use `::: {.flex-col-2}` to flow content into two columns:
-
-::: {.spacer}
-:::
-
-::: {.flex-col-2}
-
-::: {}
-Lorem Ipsum
-
-- Lorem ipsum 1
-- Lorem ipsum 2
-- Lorem ipsum 3
-:::
-
-::: {}
-Lorem Isum
-
-- Lorem ipsum 1
-- Lorem ipsum 2
-- Lorem ipsum 3
-:::
-
-::: {}
-Lorem Isum
-
-- Lorem ipsum 1
-- Lorem ipsum 2
-- Lorem ipsum 3
-:::
-
-::: {}
-Lorem Isum
-
-- Lorem ipsum 1
-- Lorem ipsum 2
-- Lorem ipsum 3
-:::
-
-:::
-
-## Flex columns
-
-Use `::: {.flex-col-3}` to flow content into three columns:
-
-::: {.spacer}
-:::
-
-::: {.flex-col-3}
-
-::: {}
-Lorem Ipsum
-
-- Lorem ipsum 1
-- Lorem ipsum 2
-- Lorem ipsum 3
-:::
-
-
-::: {}
-Lorem Ipsum
-
-- Lorem ipsum 1
-- Lorem ipsum 2
-- Lorem ipsum 3
-:::
-
-::: {}
-Lorem Ipsum
-
-- Lorem ipsum 3
-- Lorem ipsum 1
-- Lorem ipsum 2
-:::
-
-
-::: {}
-Lorem Isum
-
-- Lorem ipsum 1
-- Lorem ipsum 2
-- Lorem ipsum 3
-:::
-
-::: {}
-Lorem Isum
-
-- Lorem ipsum 1
-- Lorem ipsum 2
-- Lorem ipsum 3
-:::
-
-::: {}
-Lorem Isum
-
-- Lorem ipsum 1
-- Lorem ipsum 2
-- Lorem ipsum 3
-:::
-
-:::
+> This is something that a very smart person said.
 
 ## Compact lines
 
