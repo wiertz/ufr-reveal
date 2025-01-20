@@ -21,25 +21,25 @@ $ufr-sand-50: #faf8f1;
 $ufr-sand: #f6f1e3;
 
 :root {
-    --ufr-darkblue: #00004a;
-    --ufr-blue-20: #D7D8EC;
-    --ufr-blue-40: #AFB1D8;
-    --ufr-blue-80: #5D6BAD;
-    --ufr-blue: #344A9A;
-    --ufr-pink-20: #fdf3fb;
-    --ufr-pink-40: #fbe7f8;
-    --ufr-pink: #f5c2ed;
-    --ufr-pink-dark: #e76ad3;
-    --ufr-green-20: #daede7;
-    --ufr-green-40: #afdace;
-    --ufr-green: #00a082;
-    --ufr-green-dark: #006d59;
-    --ufr-yellow-20: #fffae0;
-    --ufr-yellow-40: #fff6c1;
-    --ufr-yellow: #ffe863;
-    --ufr-yellow-dark: #c9ab00;
-    --ufr-sand-50: #faf8f1;
-    --ufr-sand: #f6f1e3;
+  --ufr-darkblue: #00004a;
+  --ufr-blue-20: #D7D8EC;
+  --ufr-blue-40: #AFB1D8;
+  --ufr-blue-80: #5D6BAD;
+  --ufr-blue: #344A9A;
+  --ufr-pink-20: #fdf3fb;
+  --ufr-pink-40: #fbe7f8;
+  --ufr-pink: #f5c2ed;
+  --ufr-pink-dark: #e76ad3;
+  --ufr-green-20: #daede7;
+  --ufr-green-40: #afdace;
+  --ufr-green: #00a082;
+  --ufr-green-dark: #006d59;
+  --ufr-yellow-20: #fffae0;
+  --ufr-yellow-40: #fff6c1;
+  --ufr-yellow: #ffe863;
+  --ufr-yellow-dark: #c9ab00;
+  --ufr-sand-50: #faf8f1;
+  --ufr-sand: #f6f1e3;
 }
 
 
@@ -70,184 +70,255 @@ $presentation-slide-text-align: left;
 $presentation-title-slide-text-align: left;
 
 
+
 /*-- scss:rules --*/
 
+//
+// Links
+//
+.reveal .slide a {
+  color: inherit;
+}
+
+.reveal .slide a:hover {
+  filter: opacity(0.75);
+}
+
+// 
+// Blockquote
+//
 .reveal .slide blockquote {
   color: var(--ufr-green);
   border-left-color: var(--ufr-green);
 }
 
-.reveal .slide figure>figcaption {
+// 
+// Aside
+//
+.reveal .slide aside {
+  color: #777;
+  font-size: 0.6em;
+}
+
+//
+// Titles
+//
+.reveal .slide h1,
+.reveal .slide h2 {
+  margin-bottom: 6rem;
+}
+
+.reveal .slide h1:has(+ h3),
+.reveal .slide h2:has(+ h3) {
+  margin-bottom: 0;
+}
+
+.reveal .slide h1:has(+ img),
+.reveal .slide h2:has(+ img) {
+  margin-bottom: 1rem;
+}
+
+.reveal .slide h1+h3,
+.reveal .slide h2+h3 {
+  font-size: $heading2Size;
+  color: black;
+  line-height: 1;
+  margin-bottom: 5rem;
+}
+
+.reveal .slide h4,
+p:has(+ ul) {
+  color: var(--ufr-blue);
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+//
+// Lists
+// 
+.reveal .slide ul li:last-of-type {
+  margin-bottom: 0.8rem;
+}
+
+.reveal .slide ul ul {
+  color: $ufr-blue;
+  line-height: 1;
+  list-style-type: circle;
+  font-size: smaller;
+}
+
+//
+// Figures
+//
+.reveal .slide figure>figcaption,
+.reveal .slide img+p.caption {
+  font-size: 0.75em !important;
   color: $ufr-blue;
   text-align: center;
 }
 
-.reveal .slide aside {
-  color: #888;
-    font-weight: normal;
-    font-size: 0.75em;
-    bottom: 2em;
+//
+// Column layout
+//
+.reveal .slide .quarto-layout-row {
+  gap: 1em;
 }
 
-// add space
-.spacer {
-    height: 1em;
-}
-
-
-// footer with logo and slide number
-
-.reveal .footer {
-    bottom: 15px !important;
-    font-size: 2.5vmin !important;
-    right: 5rem !important;
-    text-align: right !important;
-    color: $ufr-blue;
-    max-width: 60vw;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.reveal .slide-logo {
-    right: unset !important;
-    bottom: 15px !important;
-    left: 4rem !important;
-    height: 3vmin !important;
-    margin: 0 !important;
-}
-
-.reveal .slide-number {
-    top: unset !important;
-    bottom: 15px !important;
-    font-size: 2.5vmin !important;
-    right: 2rem !important;
-    text-align: right !important;
-    color: $ufr-blue;
-    background-color: transparent;
-}
-
-
-// slide title and subsequent text
-
-.reveal .slide h2 {
-    margin-bottom: 6rem;
-}
-
-.reveal .slide h2:has(+ h3) {
-    margin-bottom: 0;
-}
-
-.reveal .slide h2:has(+ img) {
-    margin-bottom: 1rem;
-}
-
-.reveal .slide h2 + h3 {
-    font-size: $heading2Size;
-    color: black;
-    line-height: 1;
-    margin-bottom: 5rem;
-}
-
-p:has(+ ul) {
-    color: var(--ufr-blue);
-    margin-bottom: 0;
-    font-weight: bold;
-}
-
-
-// lists
-
-.reveal .slide ul li:last-of-type {
-    margin-bottom: 0.8rem;
-}
-
-.reveal .slide ul ul {
-    color: $ufr-blue;   
-    line-height: 1;
-    list-style-type: circle;
-    font-size: smaller;
-}
-
-
-// colored blocks
-
-.block-pink {
-    background-color: var(--ufr-pink);
-    padding: 0.1em 0.4em;
-    border-radius: 5px;
-}
-
-.block-green {
-    background-color: var(--ufr-green-40);
-    padding: 0.1em 0.4em;
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
-    border-radius: 5px;
-}
-
-.block-yellow {
-    background-color: var(--ufr-yellow);
-    padding: 0.1em 0.4em;
-    border-radius: 5px;
-}
-
-
-// layout helpers
-
-.tiny {
+//
+// Helper classes
+//
+.reveal .slide .tiny {
   font-size: 0.5em;
 }
 
-.small {
-    font-size: 0.8em;
+.reveal .slide .small {
+  font-size: 0.75em;
 }
 
-.compact,
-.compact > * {
-    line-height: 1.05 !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+.reveal .slide .compact,
+.reveal .slide .compact>* {
+  line-height: 1.05 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
-// // tables
-// .reveal .slide table {
-//     margin: unset;
-// }
+//
+// Font colors
+//
+.col-grey {
+  color: #777
+}
+
+.col-blue {
+  color: var(--ufr-blue)
+}
+
+.col-pink {
+  color: var(--ufr-pink-dark)
+}
+
+.col-green {
+  color: var(--ufr-green)
+}
+
+//
+// Colored blocks
+//
+.reveal .slide .block {
+  margin: 0 0 0.6em 0;
+  padding: 0.5em 0.75em;
+  border-radius: 5px;
+}
+
+.reveal .slide .block :last-child {
+  margin-bottom: 0;
+}
+
+.reveal .slide .block :first-child {
+  margin-top: 0;
+}
+
+.reveal .slide .bg-grey {
+  background-color: #ddd;
+}
+
+.reveal .slide .bg-blue {
+  background-color: var(--ufr-blue-20);
+}
+
+.reveal .slide .bg-pink {
+  background-color: var(--ufr-pink);
+}
+
+.reveal .slide .bg-green {
+  background-color: var(--ufr-green-40);
+}
+
+.reveal .slide .bg-yellow {
+  background-color: var(--ufr-yellow);
+}
+
+// references
+.reveal .slide #refs {
+  background-color: var(--ufr-blue-20);
+  border: 1px solid var(--ufr-darkblue);
+  padding: 0.5em 0.5em;
+  color: var(--ufr-blue);
+  font-size: 0.75em;
+  line-height: 1;
+  margin-left: 0;
+  text-indent: 0;
+  max-height: 850px;
+  overflow-y: auto;
+}
+
+div.csl-entry {
+  margin-left: 0;
+  margin-bottom: .5em;
+  text-indent: 0;
+}
 
 
-// images
+//
+// footer with logo and slide number
+//
 
-// .reveal .slide > img {
-//     margin-left: unset !important;
-//     margin-right: unset !important;
-// }
+.reveal .footer {
+  font-size: 2.5vmin !important;
+  right: 5rem !important;
+  text-align: right !important;
+  color: $ufr-blue;
+  max-width: 60vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+.reveal .slide-logo {
+  right: unset !important;
+  bottom: 12px !important;
+  left: 4rem !important;
+  // height: 3vmin !important;
+  height: 28px !important;
+  margin: 0 !important;
+}
 
+.reveal .slide-number {
+  top: unset !important;
+  bottom: 15px !important;
+  font-size: 2.5vmin !important;
+  right: 2rem !important;
+  text-align: right !important;
+  color: $ufr-blue;
+  background-color: transparent;
+}
+
+//
 // title slide
+//
 
 #title-slide {
-    text-align: left;
+  text-align: left;
 }
 
 #title-slide .title {
-    margin-top: 12rem;
-    margin-bottom: 2rem;
-    font-size: 6rem;
+  margin-top: 12rem;
+  margin-bottom: 2rem;
+  font-size: 6rem;
 }
 
 #title-slide .subtitle {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 #title-slide #ufr-logo {
-    padding-left: 0.4rem;
-    height: 3rem;
+  padding-left: 0.4rem;
+  height: 3rem;
 }
 
 #title-slide .quarto-title-authors {
-    padding: 0;
-    justify-content: left;
+  padding: 0;
+  justify-content: left;
 }
 
 .quarto-title-block,
@@ -257,19 +328,46 @@ p:has(+ ul) {
 .quarto-title-author-email,
 .quarto-title-affiliation,
 .date {
-    font-size: 2rem !important;
-    padding: 0 !important;
-    margin: 0 !important;
+  font-size: 2rem !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 #title-slide .quarto-title-authors {
-    margin-top: 16rem !important;
+  margin-top: 16rem !important;
 }
 
+//
 // Agenda slide
-
+//
 .reveal .slide .agenda {
   border-top: 5px solid $headingColor;
   border-bottom: 5px solid $headingColor;
   padding: 2rem 20% 1rem 0.3rem;
+}
+
+
+
+//
+// Chapter slide
+//
+.reveal .backgrounds .chapter {
+  background-color: var(--ufr-blue-40);
+  // background-image: url("siegel-outline.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top 20px right 0;
+}
+
+.reveal .slide.chapter h1,
+.reveal .slide.chapter h2 {
+  color: var(--ufr-blue);
+  font-size: 1.8em;
+  margin-top: 3em;
+}
+
+.reveal .slide.chapter p {
+  color: var(--ufr-blue);
+  font-size: 1.1em;
+  margin-top: 1em;
 }

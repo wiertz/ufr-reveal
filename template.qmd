@@ -24,15 +24,7 @@ format: ufr-revealjs
 - ...futher chapters
 :::
 
-## Formatting examples
-### You can add subtitles as third level headlines
-
-Adding a div by using `::: {.spacer}` creates a blank space.
-
-::: {.spacer}
-:::
-
-So this line is set apart from the one before.
+# A new chapter begins {.chapter}
 
 ## A single column slide
 
@@ -46,9 +38,17 @@ Text before a list is emphasized automatically
 Note that there is a side remark in an `.aside` div.
 :::
 
-## Highlights
+## Colored blocks
 
-To highlight a piece of text, put it in a div:
+To highlight content, put it in a colored block:
+
+::: {.block-grey}
+`::: {.block-grey}`
+:::
+
+::: {.block-blue}
+`::: {.block-blue}`
+:::
 
 ::: {.block-pink}
 `::: {.block-pink}`

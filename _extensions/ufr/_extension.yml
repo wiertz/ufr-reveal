@@ -10,7 +10,7 @@ contributes:
         ufr-blue-40: "#AFB1D8"
         ufr-blue: "#344A9A"
         ufr-pink-20: "#fdf3fb"
-        ufr-pink-40: "#fbe7f8"
+        ufr-pink-40: &ufr-pink-40 "#fbe7f8"
         ufr-pink: "#f5c2ed"
         ufr-green-20: &ufr-green-20 "#daede7"
         ufr-green-40: "#afdace"
@@ -20,9 +20,9 @@ contributes:
         ufr-yellow: "#ffe863"
         ufr-sand-50: "#faf8f1"
         ufr-sand: &ufr-sand "#f6f1e3"
-        conclusion: *ufr-blue-20
-        objective: *ufr-green-20
-        task: *ufr-sand
+        conclusion: *ufr-green-20
+        objective: *ufr-sand
+        task: *ufr-pink-40
     revealjs:
       embed-resources: true
       filters: [colors.lua]
