@@ -1,6 +1,6 @@
 title: Ufr
 author: Thilo Wiertz
-version: 1.0.5
+version: 1.0.6
 quarto-required: ">=1.5.0"
 contributes:
   formats:
@@ -25,7 +25,7 @@ contributes:
         task: *ufr-pink-40
     revealjs:
       embed-resources: true
-      filters: [colors.lua]
+      filters: [colors.lua, pandoc-quotes.lua]
       theme: ufr.scss
       logo: "ufr-logo-blue.png"
       width: 1920
